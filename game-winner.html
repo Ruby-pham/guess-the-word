@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Who is winner</title>
+    <link rel="icon" href="images/icon.jpeg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+          integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="style-winner.css">
+</head>
+<body>
+<div id="wrapper">
+    <button id="back">
+        <i class="fa-solid fa-house"></i>
+    </button>
+    <div id="welcomeScreen" class="hide">
+        <input id="name" placeholder="Enter the player's name">
+        <button id="startBtn">Start</button>
+        <button id="rankBtn">Ranking</button>
+    </div>
+    <div id="ranking"
+         style="font-size: 40px;font-weight: bold;color: black; background-color: aquamarine; text-align: center;width: 80%; margin-left: 60px; margin-top: 70px">
+    </div>
+    <div id="questionScreen">
+        <div class="question"><img src="" alt="image to guess" id="image"></div>
+        <div id="answers">
+                <div id="answer_1">
+                    <input type="radio" name="answer"/>
+                </div>
+                <div id="answer_2">
+                    <input type="radio" name="answer"/>
+                </div>
+                <div id="answer_3">
+                    <input type="radio" name="answer"/>
+                </div>
+        </div>
+        <div style="margin-top: 20px" id="userName"></div>
+        <div id="score"></div>
+    </div>
+</div>
+<audio controls id="correct-sound">
+    <source src="./sound/tiengvotaytrue.mp3" type="audio/mpeg">
+</audio>
+<audio controls id="wrong-sound">
+    <source src="./sound/traloisai.mp3" type="audio/mpeg">
+</audio>
+
+<script src="ui.js"></script>
+<script src="who-is-winner.js"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+
+body {
+    background-image: url('images/back-ground.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    background-color: gray;
+}
+
+#wrapper {
+    background-image: url("https://tse3.mm.bing.net/th?id=OIP.zHYdpDAmzNm9p4L1Zw79yAHaEK&pid=Api&P=0&h=180");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: 1px solid black;
+    width: 40%;
+    height: 80%;
+    margin: auto;
+    margin-top: 10px;
+}
+#back {
+    font-size:x-large;
+    width:50px;
+    background-color: #a6d785;
+    color: #272289;
+    border-radius: 8px;
+    margin-left: 10px;
+    margin-top: 10px;
+
+}
+.hide, #correct-sound, #wrong-sound {
+    display: none;
+}
+#name, #startBtn, #rankBtn, #instructBtn{
+    background-color:#a6d785;
+    color: #272289;
+    font-size: medium;
+    margin-left: 70%;
+    border: 2px solid blue;
+
+}
+#name {
+    width:200px;
+    height:40px;
+    border-radius: 3px;
+    margin-top: 50px;
+    margin-left: 55%;
+
+}
+
+#startBtn {
+    padding: 10px 39px;
+    border-radius: 3px;
+    margin-top: 50px;
+}
+
+#rankBtn {
+    padding: 10px 28px;
+    border-radius: 3px;
+    margin-top: 50px;
+}
+.question {
+    width: 60%;
+    height: 100%;
+    text-align: center;
+    border-radius: 4px;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 5px;
+    background-color:white;
+    border: 2px solid #a6d785;
+}
+#image{
+    width: 60%;
+    height: 50%;
+    text-align: center;
+    transition: transform 1s;
+}
+#image:hover{
+    transform: scale(1.3);
+}
+
+
+#answers {
+    width: 80%;
+    margin-left: 30%;
+}
+#answers > div {
+    border: 1px solid green;
+    text-align: center;
+    margin-bottom: 5px;
+    border-radius: 35px;
+    padding: 5px;
+    background-color: blue;
+    color: white;
+    width:50%;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+}
+#answers > div.selected {
+    background-color: green;
+    color: white;
+}
+
+#userName, #score {
+    background-color: burlywood;
+    width:20%;
+    text-align: center;
+    font-size: x-large;
+    color: darkred;
+    font-weight: bolder;
+    margin-left: 40%;
+}

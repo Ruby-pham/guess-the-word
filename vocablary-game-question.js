@@ -75,13 +75,13 @@ let questions = [
         image: 'https://tse1.mm.bing.net/th?id=OIP._GCVhLmCRPm_W4TOyBrIuQHaEK&pid=Api&P=0&h=180',
     },
 
-
 ];
 
 let questionElement = document.getElementById("question");
 let resultElement = document.getElementById("result");
 let message = document.getElementById('message');
 let hint = document.getElementById('hint');
+let scoreDisplay =document.getElementById('score');
 let arr = 0;
 let score = 0;
 let sound = document.getElementById('game-sound');
@@ -95,6 +95,9 @@ function displayQuestion() {
         input += `<input type="text" class ="char-input" data-answer="${char.toUpperCase()}" maxlength="1" oninput="moveToNextInput(this)"/>`;
     }
     resultElement.innerHTML = `${input}<br><button onclick="checkResult()">Submit</button>`;
+    if(arr<10){
+        topic.innerHTML=`Topic : Animals live in the Farm`
+    } else{topic.innerHTML=`Topic : footwear`}
     message.textContent = '';
     hint.style.display='none';
 
@@ -123,18 +126,18 @@ function checkResult() {
     }
     if (answer === correctAnswer) {
         sound.play();
-        document.getElementById('message').innerHTML = `
+        resultElement.innerHTML = `
                 <div class="win">
                 <h3>You Win</h3>
-                <p>Score :${++score}</p>
                 <button onclick="next()">Next</button>
                 </div>
                 `
-
-
+        score+=10;
+        scoreDisplay.innerHTML=`Score: ${score}`;
+        message.textContent = '';
     } else {
-        document.getElementById('message').style.color = 'red'
-        document.getElementById('message').innerHTML = `
+        message.style.color = 'red'
+        message.innerHTML = `
             <h3>Incorrect! Try again.</h3>
             `;
     }
@@ -146,8 +149,8 @@ function next() {
         displayQuestion();
     } else {
         // Khi đã đoán hết từ, bạn có thể thực hiện hành động gì đó ở đây, ví dụ: hiển thị thông báo hoàn thành trò chơi.
-        document.getElementById('message').style.color = 'green'
-        document.getElementById('message').innerHTML = `
+        resultElement.style.color = 'green'
+        resultElement.innerHTML = `
             <h3>You have guessed all the words.</h3>`
     }
 }
